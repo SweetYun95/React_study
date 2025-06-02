@@ -26,12 +26,12 @@ const App = () => {
    //       // }}
    //    />
    // )
-   return (
+   return 
       // <MyComponent job="강사" forNumber={1}>
       //    맑음
       // </MyComponent>
       <InputText/>
-   )
+   
 }
 
 export default App
