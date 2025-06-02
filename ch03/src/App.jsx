@@ -2,6 +2,7 @@
 // import 컴포넌트 함수명 from 파일명
 import MyComponent from './MyComponent'
 import Type from './Type'
+import InputText from './InputText'
 
 // function App() {}
 // 혹은
@@ -26,9 +27,10 @@ const App = () => {
    //    />
    // )
    return (
-      <MyComponent job="강사" forNumber={1}>
-         맑음
-      </MyComponent>
+      // <MyComponent job="강사" forNumber={1}>
+      //    맑음
+      // </MyComponent>
+      <InputText/>
    )
 }
 
