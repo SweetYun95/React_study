@@ -6,7 +6,7 @@ function App() {
       <>
          <input type="text"></input>
          <input type="text" />
-         {/* <input type="text" > 오류!! */}
+         {/* <input type="text"> */}
       </>
    )
 }

@@ -1,5 +1,5 @@
 function App() {
-   const type = 'radio' // true
+   const type = 'radio'
    const str = 'string' // true
    const number = 0 // false
 
@@ -7,7 +7,7 @@ function App() {
       <>
          <input type="text" value="리액트" disabled={true} />
          <br />
-         {/* str && number=> true && false => false */}
+         {/* str && number => true && false => false */}
          <input type="text" value="자바스크립트" disabled={str && number} />
          <br />
          <input type={type} checked={true} /> 선택1
