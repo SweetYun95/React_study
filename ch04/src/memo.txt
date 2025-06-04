@@ -1,0 +1,15 @@
+   EventPractice2
+ 
+   from={
+         username: '',
+         message: '',
+   }
+ 
+  [e.target.name]: e.target.value
+   nextForm = {
+    username: '',<--- 덮여쓰여짐으로 삭제
+    message: '',<--- 덮여쓰여짐으로 삭제
+[e.target.name]: e.target.value
+username:'지은',<--- 덮여쓰여짐으로 추가
+message: '안녕',<--- 덮여쓰여짐으로 추가
+   }
