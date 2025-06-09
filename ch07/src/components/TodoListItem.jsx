@@ -1,25 +1,30 @@
 import './css/TodoListItem.css'
-import { IoRemoveCircleOutline } from 'react-icons/io5'
+import { IoMdRemoveCircleOutline } from 'react-icons/io'
 import { MdCheckBox, MdCheckBoxOutlineBlank } from 'react-icons/md'
 import classnames from 'classnames'
 
-function TodoListItem({ todo, onRemove }) {
+function TodoListItem({ todo, onRemove, onToggle }) {
    const { id, text, checked } = todo
    return (
       <div className="TodoListItem">
-         {/* classnames('checkbox',{checked} - true일때*/}
-         {/* classnames('checkbox',{} - false일때 */}
+         {/* className = 'checkbox checked' */}
+         {/* className = 'checkbox' */}
          <div
             className={classnames('checkbox', { checked })}
             onClick={() => {
-               ontoggle(id)
+               onToggle(id)
             }}
          >
             {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
             <div className="text">{text}</div>
          </div>
-         <div className="remove" onRemove={onRemove}>
-            <IoRemoveCircleOutline />
+         <div
+            className="remove"
+            onClick={() => {
+               onRemove(id)
+            }}
+         >
+            <IoMdRemoveCircleOutline />
          </div>
       </div>
    )
