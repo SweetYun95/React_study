@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+// 일반적인 useState사용 방식
 function ReducerCounter1() {
    const [count, setCount] = useState(0)
 
