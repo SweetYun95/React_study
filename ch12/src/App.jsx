@@ -12,8 +12,8 @@ function App() {
    return (
       // <Provider store={storeNonToolkit}>
       <Provider store={storeUseToolkit}>
-       <Counter />
-       <User/>
+         <Counter />
+         <User />
       </Provider>
    )
 }
