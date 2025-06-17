@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getMovies, getMovieDetails } from '../api/tmdbApi'
+import { getMovies } from '../api/tmdbApi'
 
 // createAsyncThunk: 비동기 thunk 액션 -> 영화 목록을 API로부터 가져옴
 // {type:'movies/fetchMovies',  } 액션객체
@@ -8,12 +8,13 @@ import { getMovies, getMovieDetails } from '../api/tmdbApi'
 // 비동기 함수에서 API를 call하는 함수 실행
 
 // 인기영화 목록 가져오기
+// 액션 생성자 함수
 export const fetchMovies = createAsyncThunk('movies/fetchMovies', async () => {
    const response = await getMovies()
    return response.data.results
 })
 
-// 영화 디테일 가져오기
+// 영화 디테일 가져오기...?
 // export const fetchMoviesDetails = createAsyncThunk('movies/fetchMoviesDetails', async () => {
 //    const response = await getMovieDetails()
 //    return response.data.results
@@ -48,4 +49,4 @@ const movieSlice = createSlice({
    },
 })
 
-export default movieSlice.reducer // 리듀서 함수를 내보냄
+export default movieSlice.reducer // 리듀서 함수를 내보냄.
