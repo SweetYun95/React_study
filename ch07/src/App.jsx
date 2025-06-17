@@ -23,10 +23,8 @@ function App() {
    ])
 
    /*
-   1. nextId를 state로 지정하면 nextId가 바뀔때마다 리렌더링이 불필요하게 발생한다. 
-   
-   2. const nextId = 4를 사용할 경우 다른 state값(todos)가 바뀔때 리렌더링이 되면서 값이 계속 4로 초기화 된다
-   
+   1. nextId를 state로 지정하면 nextId가 바뀔때마다 리렌더링이 불필요하게 발생한다.    
+   2. const nextId = 4를 사용할 경우 다른 state값(todos)가 바뀔때 리렌더링이 되면서 값이 계속 4로 초기화 된다   
    -> 이런 이유들 때문에 useRef를 사용해서 값을 저장하는 것이 좋다. 
   */
    const nextId = useRef(4)
