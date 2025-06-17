@@ -28,25 +28,29 @@ export const getMovies = async (page = 1) => {
    return response // 응답결과 데이터 리턴
 }
 
+// 영화상세 정보 가져오기
+export const getMovieDetails = async (movieId) => {
+   // 'https://api.themoviedb.org/3/movie/movie_id?language=ko-KR'
+   const response = await tmdbApi.get(`/movie/${movieId}`, {
+      params: {
+         language: 'ko-KR',
+      },
+   })
+
+   return response // 응답결과 데이터 리턴
+}
+
+export default tmdbApi
+
 // 개봉예정 영화목록 가져오기
 export const getUpcomingMovies = async (page = 1) => {
    const response = await tmdbApi.get('/movie/upcoming', {
       params: {
          language: 'ko-KR',
-         page, // page: page,
+         page,
          region: 'KR',
       },
    })
 
    return response
 }
-
-// 영화상세 정보 가져오기
-export const getMovieDetails = async (movieId) => {
-   // https://api.themoviedb.org/3/movie/{movie_id}
-   const response = await tmdbApi.get(`/movie/${movieId}`)
-
-   return response // 응답결과 데이터 리턴
-}
-
-export default tmdbApi
