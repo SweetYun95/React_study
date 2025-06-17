@@ -7,8 +7,8 @@ function TodoListItem({ todo, onRemove, onToggle }) {
    const { id, text, checked } = todo
    return (
       <div className="TodoListItem">
-         {/* className = 'checkbox checked' */}
-         {/* className = 'checkbox' */}
+         {/* checked가 trun 일때 className = 'checkbox checked' */}
+         {/* checked가 false 일때 className = 'checkbox' */}
          <div
             className={classnames('checkbox', { checked })}
             onClick={() => {
