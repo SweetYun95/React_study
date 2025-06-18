@@ -8,10 +8,11 @@ import MUI3 from './MUI3'
 import MUI4 from './MUI4'
 import MUI5 from './MUI5'
 import MUI6 from './MUI6'
+import MUI7 from './MUI7'
 
 function App() {
    return (
-      //  <MUI1 />
+      // <MUI1 />
       // <MUI2 />
       // <MUI2_2 />
       // <MUI2_3 />
@@ -19,7 +20,8 @@ function App() {
       // <MUI3 />
       // <MUI4 />
       // <MUI5 />
-      <MUI6 />
+      // <MUI6 />
+      <MUI7 />
    )
 }
 
