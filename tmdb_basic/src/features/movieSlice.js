@@ -25,7 +25,7 @@ const movieSlice = createSlice({
    name: 'movies',
    initialState: {
       movies: [], // 인기 영화 목록
-      movieDetails: null,
+      movieDetails: null, // 영화 상세 정보
       loading: false, // 로딩 여부
       error: null, // 에러메세지
    },

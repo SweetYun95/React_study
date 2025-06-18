@@ -8,10 +8,11 @@ function MovieList() {
 
    /*
     state.movies = {
-     movies: [...],
-      loading: false,
-      error: null,
-    }
+      movies: [...], // 인기 영화 목록
+      movieDetails: null, // 영화 상세 정보
+      loading: false, // 로딩 여부
+      error: null, // 에러메세지
+   },
     */
    const { movies, loading, error } = useSelector((state) => state.movies)
 
